@@ -1,0 +1,124 @@
+---
+fdlnodes:
+  - Massestrom_Eq1:
+      id: fdl1
+      filename: Massestrom_Eq1.fdl
+      prereq: [ Division ]
+  - Massestrom_Eq2:
+      id: fdl2
+      filename: Massestrom_Eq2.fdl
+      prereq: [ ]
+  - Stetigförderer_Ex_advanced:
+      id: fdl3
+      filename: Stetigförderer_Ex_advanced.fdl
+      prereq: [ ]
+  - Unstetigförderer_Ex_simple:
+      id: fdl4
+      filename: Unstetigförderer_Ex_simple.fdl
+      prereq: [ ]
+  - Schuettgut_Def:
+      id: fdl5
+      filename: Schuettgut_Def.fdl
+      prereq: [ ]
+
+wmnodes:
+  - Mathematik:
+      name: "Mathematik"
+      id: mat1
+      children: [ Division ]
+      fdls: [ ]
+  - Division:
+      name: "Division"
+      id: mat2
+      children: [ ]
+      fdls: [ ]
+  - TUHH:
+      name: "TUHH"
+      id: tl1
+      children: [ W ]
+      fdls: [ ]
+  - W:
+      name: "W Lehrstühle"
+      id: tl2
+      children: [ W6-ITL ]
+      fdls: [ ]
+  - W6-ITL:
+      name: "W6 Institut für Technische Logistik"
+      id: tl3
+      children: [ TL ]
+      fdls: [ ]
+  - TL:
+      name: "Technische Logistik"
+      id: tl4
+      children: [ Transporttechnik, Kommisionierung ]
+      fdls: [ ]
+  - Kommisionierung:
+      name: "Kommisionierung"
+      id: tl4
+      children: [ ]
+      fdls: [ ]
+  - Transporttechnik:
+      name: "Transporttechnik"
+      id: asd
+      children: [ Fördertechnik, Verkehrstechnik ]
+      fdls: [ ]
+  - Verkehrstechnik:
+      name: "Verkehrstechnik"
+      id: asd
+      children: [ ]
+      fdls: [ ]
+  - Stetigförderer:
+      name: "Stetigförderer"
+      id: wm1
+      children: [ Schüttgut, Stückgut, Schütt- und Stückgut ]
+      fdls: [ Stetigförderer_Ex_advanced ]
+  - Unstetigförderer:
+      name: "Unstetigförderer"
+      id: wm2
+      children: [ ]
+      fdls: [ Unstetigförderer_Ex_simple ]
+  - Fördertechnik:
+      name: "Fördermittel"
+      children: [ Stetigförderer, Unstetigförderer ]
+      id: wm3
+      fdls: [ ]
+  - Schüttgut:
+      name: "Schüttgut"
+      id: wm4
+      children: [ Becherwerk, Schneckenförderer, Schwingförderer ]
+      fdls: [ Massestrom_Eq2, Schuettgut_Def ]
+  - Stückgut:
+      name: "Stückgut"
+      id: wm5
+      children: [ Kreisförderer, Rollenbahn ]
+      fdls: [ Massestrom_Eq1 ]
+  - Schütt- und Stückgut:
+      name: "Schütt- und Stückgut"
+      id: wm6
+      children: [ ]
+      fdls: [ ]
+  - Becherwerk:
+      name: "Becherwerk"
+      id: wm6
+      children: [ ]
+      fdls: [ ]
+  - Schneckenförderer:
+      name: "Schneckenförderer"
+      id: wm6
+      children: [ ]
+      fdls: [ ]
+  - Schwingförderer:
+      name: "Schwingförderer"
+      id: wm6
+      children: [ ]
+      fdls: [ ]
+  - Kreisförderer:
+      name: "Kreisförderer"
+      id: wm6
+      children: [ ]
+      fdls: [ ]
+  - Rollenbahn:
+      name: "Rollenbahn"
+      id: wm6
+      children: [ ]
+      fdls: [ ]

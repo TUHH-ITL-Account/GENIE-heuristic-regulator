@@ -1,0 +1,5 @@
+FDL Unstetigfoerderer_Ex_simple {
+  EXAMPLES "Unstetigförderer" := {
+    "Gabelstapler"; "Brückenkran"; "Hubwagen"; "Stapelkarre"; "Handwagen"; "Portalkran"; "Drehkran"
+  }
+}

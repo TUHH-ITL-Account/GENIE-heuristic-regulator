@@ -1,0 +1,21 @@
+FDL Massestrom_Eq1 {
+  EQUATION m^^{.} = (m / l_{"a"}) * v
+  WITH:
+    ALIASES:
+      m^^{.} = "Massestrom";
+      l_{"a"} = "Gutabstand";
+      m = "Durchschnittliche Masse";
+      v = "Foerdergeschwindigkeit";
+
+    SPECIFICATIONS:
+      m^^{.} = "mass"/"time";
+      m = "mass";
+      l_{"a"} = "length";
+      v = "length"/"time";
+
+    REFERENCES:
+      m^^{.} = 20-40 kg/s IN I; //I=Integer=ganze Zahl
+      m = 1-5 kg IN F[2]; //F=Float=fließkomma Zahl + 2 Nachkomma
+      l_{"a"} = 5-100 m IN F[1];
+      v = 1-10 km/h;
+}

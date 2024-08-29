@@ -1,0 +1,31 @@
+variables:
+  GRADLE_OPTS: "-Dorg.gradle.daemon=false"
+
+stages:
+  - build
+  - deploy
+
+before_script:
+  - export GRADLE_USER_HOME=`pwd`/.gradle
+  - "java --version"
+  - "gradle -v"
+
+build_gradle:
+  stage: build
+  tags:
+    - generating_backend
+  script:
+    - gradle fatJar
+    - |
+        {
+          echo "Commit Info from build stage:"
+          echo "CI Job start = $CI_JOB_STARTED_AT"
+          echo "CI JOB ID = $CI_JOB_ID"
+          echo "CI Pipeline ID = $CI_PIPELINE_ID"
+          echo "Commit Timestamp = $CI_COMMIT_TIMESTAMP"
+          echo "Commit Hash = $CI_COMMIT_SHA"
+        } >> build/libs/ci_commit_info.txt
+  artifacts:
+    paths:
+      - build/libs
+    expire_in: 1 hour

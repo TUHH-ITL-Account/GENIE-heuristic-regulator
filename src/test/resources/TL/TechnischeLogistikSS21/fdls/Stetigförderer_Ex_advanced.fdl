@@ -1,0 +1,11 @@
+FDL Stetigfoerderer_Ex_advanced {
+  EXAMPLES "Stetigförderer" := {
+    "Rollenbahn" ["aufgeständert";"ortsfest";"Abwälzung"] ;
+    "Bandförderer" ["aufgeständert";"ortsfest";"Zugmittel"] ;
+    "Becherwerk" ;
+    "Schneckenförderer" ;
+    "Kreisförderer" ;
+    "Skids" ;
+    "Rutsche"
+  }
+}
